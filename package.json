@@ -4,14 +4,18 @@
   "description": "Use for browserify transform and translate code of template engine or pre-proccessor to javascript string",
   "main": "index.js",
   "dependencies": {
-    "swig": "^1.4.2",
     "through": "^2.3.4"
   },
   "devDependencies": {
+    "autoprefixer-stylus": "^0.3.0",
     "browserify": "^5.11.0",
     "chai": "^1.9.1",
+    "insert-css": "^0.2.0",
     "jade": "^1.5.0",
-    "mocha": "^1.21.4"
+    "mocha": "^1.21.4",
+    "node-sass": "^0.9.3",
+    "stylus": "^0.48.1",
+    "swig": "^1.4.2"
   },
   "scripts": {
     "test": "mocha test/*.spec.js -R spec"

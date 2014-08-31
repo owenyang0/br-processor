@@ -24,8 +24,13 @@ module.exports = function(file, options) {
     var stream = this;
     try {
       var result = processor.process(inputString);
-      stream.queue(result);
-      stream.queue(null);
+      if (typeof result === 'string') {
+        stream.queue(result);
+        stream.queue(null);
+      } else {
+        stream.queue('');
+        stream.queue(null);
+      }
     } catch (error) {
       stream.emit('error', error);
     }

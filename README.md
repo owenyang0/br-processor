@@ -6,6 +6,8 @@ and translate code of template engine or pre-proccessor to javascript string.
 [![Build Status](https://travis-ci.org/morlay/br-accord-render.svg?branch=master)](https://travis-ci.org/morlay/br-accord-render)
 [![Dependencies](https://david-dm.org/morlay/br-accord-render.png)](https://david-dm.org/morlay/br-accord-render)
 
+Support most pre-precessor which has sync api; 
+
 ## Options
 
 * `processorList`
