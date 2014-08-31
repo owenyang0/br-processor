@@ -1,0 +1,36 @@
+{
+  "name": "br-processor",
+  "version": "0.1.0",
+  "description": "Use for browserify transform and translate code of template engine or pre-proccessor to javascript string",
+  "main": "index.js",
+  "dependencies": {
+    "through": "^2.3.4"
+  },
+  "devDependencies": {
+    "browserify": "^5.11.0",
+    "chai": "^1.9.1",
+    "jade": "^1.5.0",
+    "mocha": "^1.21.4"
+  },
+  "scripts": {
+    "test": "mocha test/*.spec.js -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/morlay/br-processor.git"
+  },
+  "author": "morlay",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/morlay/br-processor/issues"
+  },
+  "homepage": "https://github.com/morlay/br-processor",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "browserify",
+    "transform",
+    "processor"
+  ]
+}
