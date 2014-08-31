@@ -4,6 +4,7 @@
   "description": "Use for browserify transform and translate code of template engine or pre-proccessor to javascript string",
   "main": "index.js",
   "dependencies": {
+    "swig": "^1.4.2",
     "through": "^2.3.4"
   },
   "devDependencies": {

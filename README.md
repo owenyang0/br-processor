@@ -38,5 +38,6 @@ Then use for `b.transform(transformOpts,brProcessor)`
   }
 
   function escapeContent(content) {
-    return content.replace(/\\/g, "\\\\").replace(/'/g, "\\'");
+    return content.replace(/\\/g, '\\\\').replace(/'/g, '\\\'').replace(/\r?\n/g,
+      '\\n\' +\n    \'');
   }
