@@ -3,10 +3,10 @@
 Use for [browserify transform](https://github.com/substack/node-browserify#btransformopts-tr)
 and translate code of template engine or pre-proccessor to javascript string.
 
-[![Build Status](https://travis-ci.org/morlay/br-accord-render.svg?branch=master)](https://travis-ci.org/morlay/br-accord-render)
-[![Dependencies](https://david-dm.org/morlay/br-accord-render.png)](https://david-dm.org/morlay/br-accord-render)
+[![Build Status](https://travis-ci.org/morlay/br-processor.svg?branch=master)](https://travis-ci.org/morlay/br-processor)
+[![Dependencies](https://david-dm.org/morlay/br-processor.png)](https://david-dm.org/morlay/br-processor)
 
-Support most pre-precessor which has sync api; 
+Support most pre-precessor which has sync api;
 
 ## Options
 
