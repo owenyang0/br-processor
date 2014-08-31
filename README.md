@@ -18,28 +18,29 @@ Support most pre-precessor which has sync api;
 
 Then use for `b.transform(transformOpts,brProcessor)`
 
-  var jade = require('jade');
 
-  var transformOpts = {
-    processorList: [{
-      matchTest: function(file) {
-        return /\.jade$/.exec(file);
-      },
-      process: function(inputString) {
-        return html2jsWraper(jade.render(inputString, jadeOpts));
-      }
-    }]
-  }
+    var jade = require('jade');
 
-  function html2jsWraper(string) {
-    return [
-      'module.exports=',
-      escapeContent(string),
-      ';'
-    ].join('\'')
-  }
+    var transformOpts = {
+      processorList: [{
+        matchTest: function(file) {
+          return /\.jade$/.exec(file);
+        },
+        process: function(inputString) {
+          return html2jsWraper(jade.render(inputString, jadeOpts));
+        }
+      }]
+    }
 
-  function escapeContent(content) {
-    return content.replace(/\\/g, '\\\\').replace(/'/g, '\\\'').replace(/\r?\n/g,
-      '\\n\' +\n    \'');
-  }
+    function html2jsWraper(string) {
+      return [
+        'module.exports=',
+        escapeContent(string),
+        ';'
+      ].join('\'')
+    }
+
+    function escapeContent(content) {
+      return content.replace(/\\/g, '\\\\').replace(/'/g, '\\\'').replace(/\r?\n/g,
+        '\\n\' +\n    \'');
+    }
