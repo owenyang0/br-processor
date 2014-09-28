@@ -1,6 +1,6 @@
 {
   "name": "br-processor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Use for browserify transform and translate code of template engine or pre-proccessor to javascript string",
   "main": "index.js",
   "dependencies": {

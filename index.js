@@ -23,7 +23,7 @@ module.exports = function(file, options) {
   function end() {
     var stream = this;
     try {
-      var result = processor.process(inputString);
+      var result = processor.process(inputString, file);
       if (typeof result === 'string') {
         stream.queue(result);
         stream.queue(null);
