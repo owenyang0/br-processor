@@ -1,5 +1,5 @@
-image: node0.10
-
-script:
-  - npm -d install
-  - npm test
+build:
+  image: node
+  commands:
+    - npm -d install
+    - npm test
