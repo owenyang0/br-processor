@@ -1,20 +1,20 @@
 {
   "name": "br-processor",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "description": "Use for browserify transform and translate code of template engine or pre-proccessor to javascript string",
   "main": "index.js",
   "dependencies": {
-    "through": "^2.3.4"
+    "through": "^2.3.8"
   },
   "devDependencies": {
-    "autoprefixer-stylus": "^0.3.0",
-    "browserify": "^5.11.0",
-    "chai": "^1.9.1",
+    "autoprefixer-stylus": "^0.9.2",
+    "browserify": "^13.0.0",
+    "chai": "^3.5.0",
     "insert-css": "^0.2.0",
-    "jade": "^1.5.0",
-    "mocha": "^1.21.4",
-    "node-sass": "^0.9.3",
-    "stylus": "^0.48.1",
+    "jade": "^1.11.0",
+    "mocha": "^2.4.5",
+    "node-sass": "^3.4.2",
+    "stylus": "^0.54.2",
     "swig": "^1.4.2"
   },
   "scripts": {

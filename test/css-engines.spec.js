@@ -87,9 +87,9 @@ describe('css engines', function() {
     };
 
     function output(result) {
-      assert.equal(result, sass.renderSync({
+      assert.equal(result, String(sass.renderSync({
         data: inputObj.contents
-      }));
+      }).css));
       done();
     }
 
@@ -101,7 +101,7 @@ describe('css engines', function() {
         process: function(inputString) {
           return css2jsWraper(sass.renderSync({
             data: inputString
-          }));
+          }).css);
         }
       }]
     }
@@ -115,7 +115,7 @@ describe('css engines', function() {
 function css2jsWraper(string) {
   return [
     'require("insert-css")(',
-    escapeContent(string),
+    escapeContent(String(string)),
     ');'
   ].join('\'')
 }
