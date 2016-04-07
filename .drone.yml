@@ -1,5 +1,5 @@
 build:
-  image: node
+  image: node:5
   commands:
     - npm -d install
     - npm test
