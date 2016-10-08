@@ -24,13 +24,22 @@ module.exports = function(file, options) {
     var stream = this;
     try {
       var result = processor.process(inputString, file);
-      if (typeof result === 'string') {
-        stream.queue(result);
+      
+      new Promise(function(resolve, reject) {
+        if (typeof result === 'string') {
+          resolve(result);
+        } else if (result.then && typeof result.then === 'function') {
+          return result.then(function(ret) {
+            resolve(ret);
+          })
+        }
+
+        resolve('');
+      })
+      .then(function(ret) {
+        stream.queue(ret);
         stream.queue(null);
-      } else {
-        stream.queue('');
-        stream.queue(null);
-      }
+      });
     } catch (error) {
       stream.emit('error', error);
     }
